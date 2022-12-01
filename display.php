@@ -95,6 +95,7 @@
       </div>
       </div>
       </div>";
+      break;
       default: echo "<div class=\"d-flex justify-content-center\"><p class=\"noproduct\">No Product</p></div>";
     }
   ?>
