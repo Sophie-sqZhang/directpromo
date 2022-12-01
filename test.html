@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Bootstrap 4 Accordion with Plus Minus Icons - All Collapsed</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+      .bs-example {
+        margin: 20px;
+      }
+      .accordion .fa {
+        margin-right: 0.5rem;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function () {
+          $(this)
+            .prev(".card-header")
+            .find(".fa")
+            .addClass("fa-minus")
+            .removeClass("fa-plus");
+        });
+
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse")
+          .on("show.bs.collapse", function () {
+            $(this)
+              .prev(".card-header")
+              .find(".fa")
+              .removeClass("fa-plus")
+              .addClass("fa-minus");
+          })
+          .on("hide.bs.collapse", function () {
+            $(this)
+              .prev(".card-header")
+              .find(".fa")
+              .removeClass("fa-minus")
+              .addClass("fa-plus");
+          });
+
+        // Force all links to open in parent window
+        $("a").click(function () {
+          top.window.location.href = $(this).attr("href");
+          return true;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="bs-example">
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div
+            class="card-header"
+            id="heading1"
+            data-toggle="collapse"
+            data-target="#collapse1"
+          >
+            <p class="mb-0">
+              <strong>
+                Full Equipment List<i
+                  class="fa fa-plus"
+                  style="float: right"
+                ></i>
+              </strong>
+            </p>
+          </div>
+          <div
+            id="collapse1"
+            class="collapse"
+            aria-labelledby="heading1"
+            data-parent="#accordionExample"
+          >
+            <div class="card-body">
+              <p>1 x Large box or bag to put everything in</p>
+
+              <p>1 x Ruler and/or 1x tape measure</p>
+
+              <p>
+                1 x Timer or mobile phone with a timer, or a clock with a second
+                hand
+              </p>
+
+              <p>2 x Plastic cups</p>
+
+              <p>2 x Big rubber bands</p>
+
+              <p>Approx. 4m of string</p>
+
+              <p>1 x Chopstick or big spoon</p>
+
+              <p>1 x Notebook or paper</p>
+
+              <p>1 x Pencil</p>
+
+              <p>1 x Magnet or fridge magnet</p>
+
+              <p>1 x Coat hanger, metal or child size</p>
+
+              <p>1 x Take away box of lunch box sized container</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div
+            class="card-header"
+            id="heading2"
+            data-toggle="collapse"
+            data-target="#collapse2"
+          >
+            <p class="mb-0">
+              <strong>
+                Session 1 Equipment List: Collecting and Classifying<i
+                  class="fa fa-plus"
+                  style="float: right"
+                ></i>
+              </strong>
+            </p>
+          </div>
+          <div
+            id="collapse2"
+            class="collapse"
+            aria-labelledby="heading2"
+            data-parent="#accordionExample"
+          >
+            <div class="card-body">
+              <p>Approx. 6 pairs of socks, hats and t-shirts</p>
+
+              <p>
+                Approx. 10 small toys e.g. Matchbox cars, small animals, Duplo
+                Lego bricks.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div
+            class="card-header"
+            id="heading3"
+            data-toggle="collapse"
+            data-target="#collapse3"
+          >
+            <p class="mb-0">
+              <strong>
+                Session 2 Equipment List: Measuring and Recording<i
+                  class="fa fa-plus"
+                  style="float: right"
+                ></i>
+              </strong>
+            </p>
+          </div>
+          <div
+            id="collapse3"
+            class="collapse"
+            aria-labelledby="heading3"
+            data-parent="#accordionExample"
+          >
+            <div class="card-body">
+              <p>
+                Your Discovery Box<br />
+                <br />
+                Small items from around the house such as cutlery, toys, coins,
+                pieces of fruit
+              </p>
+
+              <p><strong>To make a mobile:</strong></p>
+
+              <p>
+                7 pieces of string approx. 30 cm long<br />
+                <br />
+                Coat hanger, chopsticks, pencils, pop sticks<br />
+                <br />
+                7 small toys or chenille stems
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div
+            class="card-header"
+            id="heading4"
+            data-toggle="collapse"
+            data-target="#collapse4"
+          >
+            <p class="mb-0">
+              <strong>
+                Session 3 Equipment List: Experimenting<i
+                  class="fa fa-plus"
+                  style="float: right"
+                ></i>
+              </strong>
+            </p>
+          </div>
+          <div
+            id="collapse4"
+            class="collapse"
+            aria-labelledby="heading4"
+            data-parent="#accordionExample"
+          >
+            <div class="card-body">
+              <ul>
+                <li>Your Discovery Box</li>
+                <li>Two or more small wheeled toys, eg. cars</li>
+              </ul>
+
+              <p>
+                To make an inclined slope, 1x of the below options or similar:
+              </p>
+
+              <ul>
+                <li>Tray</li>
+                <li>Lid</li>
+                <li>Large box</li>
+                <li>Cardboard</li>
+                <li>Small whiteboard with one end resting on a box</li>
+              </ul>
+
+              <p><strong>JOYS OF ATTRACTION</strong></p>
+
+              <ul>
+                <li>Magnet or fridge magnet from Discovery Box</li>
+              </ul>
+
+              <p><strong>MUSICAL COAT HANGER</strong></p>
+
+              <ul>
+                <li>1x Metal coat hanger</li>
+                <li>2x Pieces of of string, approx 45cm long</li>
+                <li>Pencil, pen or teaspoon</li>
+              </ul>
+
+              <p><strong>SINK AND SALT</strong></p>
+
+              <ul>
+                <li>2x strips of Blu tack or plasticine</li>
+                <li>3x Cups with tap water</li>
+                <li>Spoon</li>
+                <li>(Newspaper, towel)</li>
+              </ul>
+
+              <p><strong>SINK AND FLOAT</strong></p>
+
+              <ul>
+                <li>1x Hard-boiled egg or a grape</li>
+                <li>1x Plastic bowl</li>
+                <li>1x Spoon</li>
+                <li>
+                  2x Cups with tap water (can use those in the Discovery Box)
+                </li>
+                <li>1/4 Cup of salt</li>
+                <li>(Newspaper, towel)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+
+    <!-- iFrame Manager -->
+    <script>
+      window.iFrameResizer = {
+        targetOrigin: "https://library.begavalley.nsw.gov.au",
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="https://pagemind.s3.amazonaws.com/js/iframe-resizer/js/iframeResizer.contentWindow.min.js"
+    ></script>
+  </body>
+</html>
